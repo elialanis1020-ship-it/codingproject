@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work & Education - Eleazar Alanis</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Merriweather:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+        :root {
+            --accent-color: #c95b0c; 
+        }
+
+       
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            background-color: #fdfdf9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+       
+        header {
+            padding-top: 0; 
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        nav .logo {
+            font-family: 'Dancing+Script', cursive;
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+      
+        .header-image {
+            display: block;
+            width: 100%;
+            max-height: 350px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            margin-top: 15px; 
+            margin-bottom: 10px; 
+        }
+
+
+        /* --- Main Content --- */
+        main {
+            padding: 20px 0; 
+        }
+
+        section {
+            background-color: #fff;
+            margin-bottom: 25px;
+            padding: 30px 40px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #222;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 1.2em;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 30px 40px;
+        }
+        
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 4px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .hero-content {
+            flex-grow: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5em;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-content h2 {
+            font-size: 1.5em;
+            color: #555;
+            border-bottom: none;
+            margin: 0;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+        }
+        
+      
+        .approach ul {
+            list-style-type: none; 
+            padding-left: 0;
+        }
+        .approach ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .approach ul li::before {
+            content: '✓'; 
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table th, table td {
+            border: 1px solid #eee;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f9f9f9;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        table a {
+            color: var(--accent-color);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        table a:hover {
+            text-decoration: underline;
+        }
+        .history-section ul {
+            list-style-type: '🎓'; 
+            padding-left: 30px;
+        }
+        .history-section ul li {
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 30px 0;
+            margin-top: 40px;
+            text-align: center;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; 
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer .contact-links {
+             margin: 5px 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            text-decoration: underline;
+            color: var(--accent-color);
+        }
+
+        
+        @media (max-width: 600px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+            .hero-content h2 {
+                font-size: 1.2em;
+            }
+            footer .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            footer a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Eleazar Alanis: Education and Work History</div>
+            </nav>
+            <img src="crosscountry.jpeg" alt="Eleazar Alanis personal photo" class="header-image">
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="work-history">
+            <h2>Work History</h2>
+            <p>My professional experience has centered on the fast food industry, teaching, and athletics!</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Organization</th>
+                        <th>Years</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Assistant Cross Country Coach</td>
+                        <td><a href="#" target="_blank">Orange Cove High School </a></td>
+                        <td>2025 – Present</td>
+                    </tr>
+                    <tr>
+                        <td>Math Tutor (High School)</td>
+                        <td><a href="#" target="_blank">Reedley College Upward Bound</a></td>
+                        <td>2025 – Present</td>
+                    </tr>
+                    <tr>
+                        <td>Pizza Maker</td>
+                        <td><a href="#" target="_blank">OC Pizza</a></td>
+                        <td>2024 – 2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="history-section">
+            <h2>Education</h2>
+            <p>My academic background is as follows!</p>
+            <ul>
+                <li>
+                    <strong>High School Diploma</strong><br>
+                    Orange Cove High School (2021 - 2025)
+                </li>
+                <li>
+                    <strong>Pending Bachelor's Degree</strong><br>
+                    Reedley College (2025- Present)
+                </li>
+            </ul>
+        </section>
+
+        <section class="approach">
+            <h2>Skills</h2>
+            <p>These are the skills I have gained over time!</p>
+            <ul>
+                <li>Customer Service</li>
+                <li>Student Mentorship
+                <li>Athlete Development</li>
+          
+                
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="contact-links">
+                <a href="mailto:eleazaralanis1020@gmail.com">eleazaralanis1020@gmail.com</a>
+                <a href="https://www.linkedin.com/in/eleazar-alanis-412702384/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
